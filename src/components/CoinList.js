@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Coin from './Coin';
 
 const filterNeeded = (coins, owned) =>
@@ -7,27 +8,37 @@ const filterNeeded = (coins, owned) =>
 const filterOwned = (coins, owned) =>
   coins.filter(c => owned.find(o => o.id === c.id) !== undefined);
 
-const filter = (filters, coins, owned) => {
-  if (filters.onlyNeeded) {
-    return filterNeeded(coins, owned);
-  } else if (filters.onlyOwned) {
-    return filterOwned(coins, owned);
-  } else {
-    return coins;
+const filterCoins = (filter, coins, owned) => {
+  switch (filter) {
+    case 'onlyNeeded':
+      return filterNeeded(coins, owned);
+    case 'onlyOwned':
+      return filterOwned(coins, owned);
+    default:
+      return coins;
   }
 };
 
-const CoinsList = ({ coins, owned, filters, onSelectedAsOwned }) => {
-  const filtered = filter(filters, coins, owned);
+const CoinsList = ({ coins, owned, filter, onSelectedAsOwned }) => {
+  const filtered = filterCoins(filter, coins, owned);
 
-  return filtered.map(coin => (
-    <Coin
-      key={coin.id}
-      coin={coin}
-      owned={owned}
-      onSelectedAsOwned={onSelectedAsOwned}
-    />
-  ));
+  return filtered.length > 0
+    ? filtered.map(coin => (
+        <Coin
+          key={coin.id}
+          coin={coin}
+          owned={owned}
+          onSelectedAsOwned={onSelectedAsOwned}
+        />
+      ))
+    : 'No coins matched';
+};
+
+CoinsList.propTypes = {
+  coins: PropTypes.array,
+  owned: PropTypes.array,
+  filter: PropTypes.string,
+  onSelectedAsOwned: PropTypes.func
 };
 
 export default CoinsList;

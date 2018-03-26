@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import coinService from '../services/coinService';
 import Filters from './Filters';
 import CoinList from './CoinList';
@@ -10,18 +10,15 @@ class App extends Component {
 
     this.state = {
       coins: [],
-      filters: {
-        all: true,
-        onlyNeeded: false,
-        onlyOwned: false
-      },
+      filter: 'all',
       owned: []
     };
   }
 
   componentDidMount() {
     const { owned } = this.props.user;
-    const coinsData = coinService.getCoins().then(coins => {
+
+    coinService.getCoins().then(coins => {
       this.setState({
         coins
       });
@@ -33,27 +30,14 @@ class App extends Component {
   }
 
   handleFilterCheckboxChange = e => {
-    const defaultState = {
-      all: false,
-      onlyNeeded: false,
-      onlyOwned: false
-    };
-    const newState = {
-      [e.target.name]: e.target.checked
-    };
-
     this.setState({
-      filters: { ...defaultState, ...newState }
+      filter: e.target.value
     });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    console.table([
-      { filter: 'all', value: this.state.filters.all },
-      { filter: 'onlyNeeded', value: this.state.filters.onlyNeeded },
-      { filter: 'onlyOwned', value: this.state.filters.onlyOwned }
-    ]);
+    console.log(this.state.filter);
   };
 
   handleSelectedAsOwned = (e, id) => {
@@ -68,25 +52,27 @@ class App extends Component {
   };
 
   render() {
-    const { coins, owned, filters } = this.state;
+    const { filter } = this.state;
 
     return (
       <div>
         <Filters
           handleSubmit={this.handleSubmit}
           handleCheckboxChange={this.handleFilterCheckboxChange}
-          filters={filters}
+          filter={filter}
         />
 
         <CoinList
-          coins={coins}
-          owned={owned}
-          filters={filters}
+          {...this.state}
           onSelectedAsOwned={this.handleSelectedAsOwned}
         />
       </div>
     );
   }
 }
+
+App.propTypes = {
+  user: PropTypes.object
+};
 
 export default App;

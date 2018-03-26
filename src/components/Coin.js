@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Coin = ({ coin, owned = [], onSelectedAsOwned }) => (
+const Coin = ({ coin, owned, onSelectedAsOwned }) => (
   <label data-testid="coin-label">
     {coin.name} — Owned?
     <input
@@ -12,5 +13,14 @@ const Coin = ({ coin, owned = [], onSelectedAsOwned }) => (
     <br />
   </label>
 );
+
+Coin.propTypes = {
+  coin: PropTypes.object,
+  owned: PropTypes.array
+};
+
+Coin.defaultProps = {
+  owned: []
+};
 
 export default Coin;

@@ -41,9 +41,9 @@ const Filters = ({ handleSubmit, handleCheckboxChange, filter }) => (
 );
 
 Filters.propTypes = {
-  handleSubmit: PropTypes.func,
-  handleCheckboxChange: PropTypes.func,
-  filter: PropTypes.string
+  handleSubmit: PropTypes.func.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired
 };
 
 export default Filters;

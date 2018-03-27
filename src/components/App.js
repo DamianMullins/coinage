@@ -9,70 +9,86 @@ class App extends Component {
     super();
 
     this.state = {
+      isLoading: true,
       coins: [],
       filter: 'all',
       owned: []
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { owned } = this.props.user;
-
-    coinService.getCoins().then(coins => {
-      this.setState({
-        coins
-      });
-    });
+    const coins = await coinService.getCoins();
 
     this.setState({
-      owned
+      coins,
+      owned,
+      isLoading: false
     });
   }
 
   handleFilterCheckboxChange = e => {
+    const { value } = e.target;
+
     this.setState({
-      filter: e.target.value
+      filter: value
     });
   };
 
-  handleSubmit = e => {
+  handleFilterSubmit = e => {
     e.preventDefault();
+
     console.log(this.state.filter);
   };
 
-  handleSelectedAsOwned = (e, id) => {
-    const { checked } = e.target;
+  handleOwnedCheckboxChange = e => {
+    const { checked, value: id } = e.target;
+    const { owned } = this.state;
+
     const newState = checked
-      ? [...this.state.owned, { id }]
-      : this.state.owned.filter(o => o.id !== id);
+      ? [...owned, { id }]
+      : owned.filter(o => o.id !== id);
 
     this.setState({
       owned: newState
     });
   };
 
+  handleCoinSubmit = e => {
+    e.preventDefault();
+
+    console.log(this.state.owned.map(o => o.id));
+  };
+
   render() {
-    const { filter } = this.state;
+    const { isLoading, filter } = this.state;
 
     return (
       <div>
-        <Filters
-          handleSubmit={this.handleSubmit}
-          handleCheckboxChange={this.handleFilterCheckboxChange}
-          filter={filter}
-        />
+        {isLoading ? (
+          <p>Loading</p>
+        ) : (
+          <div>
+            <Filters
+              handleSubmit={this.handleFilterSubmit}
+              handleCheckboxChange={this.handleFilterCheckboxChange}
+              filter={filter}
+            />
 
-        <CoinList
-          {...this.state}
-          onSelectedAsOwned={this.handleSelectedAsOwned}
-        />
+            <CoinList
+              handleSubmit={this.handleCoinSubmit}
+              handleOwnedCheckboxChange={this.handleOwnedCheckboxChange}
+              {...this.state}
+            />
+          </div>
+        )}
       </div>
     );
   }
 }
 
 App.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.object.isRequired
 };
 
 export default App;

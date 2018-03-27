@@ -19,26 +19,46 @@ const filterCoins = (filter, coins, owned) => {
   }
 };
 
-const CoinsList = ({ coins, owned, filter, onSelectedAsOwned }) => {
+const CoinList = ({
+  coins,
+  owned,
+  filter,
+  handleOwnedCheckboxChange,
+  handleSubmit
+}) => {
   const filtered = filterCoins(filter, coins, owned);
 
-  return filtered.length > 0
-    ? filtered.map(coin => (
-        <Coin
-          key={coin.id}
-          coin={coin}
-          owned={owned}
-          onSelectedAsOwned={onSelectedAsOwned}
-        />
-      ))
-    : 'No coins matched';
+  return (
+    <form onSubmit={handleSubmit}>
+      {filtered.length > 0 ? (
+        filtered.map(coin => (
+          <Coin
+            key={coin.id}
+            coin={coin}
+            owned={owned}
+            handleOwnedCheckboxChange={handleOwnedCheckboxChange}
+          />
+        ))
+      ) : (
+        <p>No coins found</p>
+      )}
+
+      <button type="submit">Update</button>
+    </form>
+  );
 };
 
-CoinsList.propTypes = {
+CoinList.propTypes = {
   coins: PropTypes.array,
   owned: PropTypes.array,
-  filter: PropTypes.string,
-  onSelectedAsOwned: PropTypes.func
+  filter: PropTypes.string.isRequired,
+  handleOwnedCheckboxChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
 
-export default CoinsList;
+CoinList.defaultProps = {
+  coins: [],
+  owned: []
+};
+
+export default CoinList;

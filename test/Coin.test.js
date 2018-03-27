@@ -4,7 +4,7 @@ import Coin from '../src/components/Coin';
 
 it('coin markup is correct', () => {
   // Arrange
-  const coin = { name: 'B - Bond... James Bond' };
+  const coin = { id: 2, name: 'B - Bond... James Bond' };
 
   // Act
   const { container } = render(<Coin coin={coin} />);

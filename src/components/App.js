@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import coinService from '../services/coinService';
+import Header from './Header';
 import Filters from './Filters';
 import CoinList from './CoinList';
 
@@ -65,6 +66,7 @@ class App extends Component {
 
     return (
       <div>
+        <Header title="Coinage" />
         {isLoading ? (
           <p>Loading</p>
         ) : (

@@ -6,6 +6,7 @@ exports[`coin markup is correct 1`] = `
 >
   <input
     type="checkbox"
+    value="2"
   />
   B - Bond... James Bond
   <br />

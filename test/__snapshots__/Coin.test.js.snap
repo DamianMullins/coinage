@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`coin markup is correct 1`] = `
+<label
+  data-testid="coin-label"
+>
+  <input
+    type="checkbox"
+  />
+  B - Bond... James Bond
+  <br />
+</label>
+`;

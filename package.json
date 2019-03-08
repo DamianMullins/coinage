@@ -39,6 +39,7 @@
   "scripts": {
     "start": "REACT_APP_RELEASE_VERSION=$npm_package_version react-scripts start",
     "build": "REACT_APP_RELEASE_VERSION=$npm_package_version react-scripts build",
+    "build:ci": "yarn build && yarn test:coverage && yarn test:coveralls",
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "yarn test --coverage",
     "test:coveralls": "cat coverage/lcov.info | coveralls",

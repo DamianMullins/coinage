@@ -15,7 +15,7 @@
     "url": "https://github.com/DamianMullins/Coinsly.git"
   },
   "dependencies": {
-    "connected-react-router": "6.8.0",
+    "connected-react-router": "6.9.3",
     "firebase": "8.10.1",
     "history": "4.10.1",
     "immer": "9.0.6",

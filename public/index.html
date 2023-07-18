@@ -10,6 +10,16 @@
 	<title>Coinsly</title>
 
 	<% if (process.env.NODE_ENV === 'production') { %>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9JL4N347R"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-N9JL4N347R');
+		</script>
+
 		<script src="https://cdn.ravenjs.com/3.24.0/raven.min.js" crossorigin="anonymous"></script>
 		<script>
 			Raven

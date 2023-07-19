@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'happy-dom'
+    environment: 'happy-dom',
+    coverage: {
+      reporter: ['text', 'lcov']
+    }
   }
 });

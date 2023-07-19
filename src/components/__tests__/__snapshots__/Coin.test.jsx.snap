@@ -1,19 +1,19 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`coin markup is correct 1`] = `
 <li
-  class="coin  not-loaded"
+  class="_coin_bc0669  not-loaded"
 >
   <label
-    class="label"
+    class="_label_bc0669"
     data-testid="coin-label"
   >
     <img
       alt=""
-      class="image"
+      class="_image_bc0669"
     />
     <input
-      class="input"
+      class="_input_bc0669"
       type="checkbox"
       value="2"
     />

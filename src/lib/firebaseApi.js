@@ -5,7 +5,7 @@ import 'firebase/storage';
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
-    apiKey: 'AIzaSyCS1WF6oQbSRVowR4ubkFGm-95LuikXG_Y',
+    apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
     authDomain: 'coinsly-c4330.firebaseapp.com',
     projectId: 'coinsly-c4330',
     storageBucket: 'coinsly-c4330.appspot.com'

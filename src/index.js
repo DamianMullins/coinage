@@ -1,6 +1,6 @@
 /* global Raven */
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
@@ -19,13 +19,15 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Router>
         <AppContainer />
       </Router>
     </ConnectedRouter>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );

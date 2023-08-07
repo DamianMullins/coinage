@@ -39,7 +39,7 @@
     "coveralls": "3.1.1",
     "happy-dom": "^10.5.2",
     "sass": "1.64.1",
-    "vite": "4.4.7"
+    "vite": "4.4.8"
   },
   "scripts": {
     "dev": "VITE_APP_RELEASE_VERSION=$npm_package_version vite",

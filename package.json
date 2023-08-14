@@ -1,6 +1,6 @@
 {
   "name": "coinsly",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "",
   "main": "src/index.js",
   "keywords": [
@@ -36,9 +36,9 @@
     "@vitejs/plugin-react-swc": "3.3.2",
     "@vitest/coverage-v8": "0.34.1",
     "coveralls": "3.1.1",
-    "happy-dom": "10.8.0",
-    "sass": "1.64.2",
-    "vite": "4.4.8",
+    "happy-dom": "10.9.0",
+    "sass": "1.65.1",
+    "vite": "4.4.9",
     "vitest": "0.34.1"
   },
   "scripts": {

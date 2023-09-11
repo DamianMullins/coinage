@@ -34,7 +34,7 @@
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@testing-library/react": "14.0.0",
     "@vitejs/plugin-react-swc": "3.3.2",
-    "@vitest/coverage-v8": "0.34.3",
+    "@vitest/coverage-v8": "0.34.4",
     "coveralls": "3.1.1",
     "happy-dom": "10.11.2",
     "sass": "1.66.1",

@@ -1400,10 +1400,10 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
-happy-dom@12.5.0:
-  version "12.5.0"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-12.5.0.tgz#c026594ccf30f6f11c9d29ea049cd97311f48174"
-  integrity sha512-bEieZxuWNc6RrTQmOkaYSxqni2TkTItsId4SimAzW/Wo2cxuPP3qL6gWV/LsBH2s4DV5HZRLwciEtmhgwJJWNw==
+happy-dom@12.9.0:
+  version "12.9.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-12.9.0.tgz#1c744bfa1386c545d65151c6afd09ce37fb34d13"
+  integrity sha512-Ap/bcno2k5316FYDqBJ2i0O1zS78W1jsNR4F/p2t3zdNoa+2H0k851RGef4STfIKdTwcQ/nk5Tx9d5BzQXfTrw==
   dependencies:
     css.escape "^1.5.1"
     entities "^4.5.0"

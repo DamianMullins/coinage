@@ -1879,10 +1879,10 @@ log-driver@^1.2.7:
   resolved "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.7.tgz#63b95021f0702fedfa2c9bb0a24e7797d71871d8"
   integrity sha512-U7KCmLdqsGHBLeWqYlFA0V0Sl6P08EE1ZrmA9cxjUE0WVqT9qnyVDPz1kzpFEP0jdJuFnasWIfSd7fsaNXkpbg==
 
-logrocket-react@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/logrocket-react/-/logrocket-react-6.0.1.tgz#a45c309d0474af48ca95d9ccb5b303bb751c86f1"
-  integrity sha512-der0s7r/hTXtNI4LWBlPYHH4Eitaq1aqiwb0kxtgwGq5cMROkQtgLJzVxSx/YRiW2xOLM4/qcuOd2L37jpz0ag==
+logrocket-react@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/logrocket-react/-/logrocket-react-6.0.3.tgz#62c2ce18b9197058f5ba60e54e3f2b084d6588ee"
+  integrity sha512-mU2QMFy5lfogXeAb+djy5XcAL5lAxPovRiN62lb4EzeuvuYmXJJmArniK3K2P9Gu02auWTiSwKHISFS0JH+eyA==
 
 logrocket@7.0.0:
   version "7.0.0"

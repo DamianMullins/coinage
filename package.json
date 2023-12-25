@@ -38,7 +38,7 @@
     "happy-dom": "12.10.3",
     "sass": "1.69.5",
     "vite": "5.0.10",
-    "vitest": "1.0.4"
+    "vitest": "1.1.0"
   },
   "scripts": {
     "dev": "VITE_APP_RELEASE_VERSION=$npm_package_version vite",

@@ -792,10 +792,10 @@
   dependencies:
     "@swc/core" "^1.3.96"
 
-"@vitest/coverage-v8@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-1.0.4.tgz#49193139399c37ddf16c23d96892ef32cd67a69a"
-  integrity sha512-xD6Yuql6RW0Ir/JJIs6rVrmnG2/KOWJF+IRX1oJQk5wGKGxbtdrYPbl+WTUn/4ICCQ2G20zbE1e8/nPNyAG5Vg==
+"@vitest/coverage-v8@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-1.1.3.tgz#f90e9d200b4cea9ff39ec1b6c35256a0f77a0e2e"
+  integrity sha512-Uput7t3eIcbSTOTQBzGtS+0kah96bX+szW9qQrLeGe3UmgL2Akn8POnyC2lH7XsnREZOds9aCUTxgXf+4HX5RA==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
     "@bcoe/v8-coverage" "^0.2.3"

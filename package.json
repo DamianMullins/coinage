@@ -18,7 +18,7 @@
     "connected-react-router": "6.9.3",
     "firebase": "8.10.1",
     "history": "4.10.1",
-    "immer": "10.0.3",
+    "immer": "10.0.4",
     "logrocket": "8.0.1",
     "logrocket-react": "6.0.3",
     "qs": "6.11.2",

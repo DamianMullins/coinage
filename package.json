@@ -33,12 +33,12 @@
   "devDependencies": {
     "@testing-library/react": "14.2.2",
     "@vitejs/plugin-react-swc": "3.6.0",
-    "@vitest/coverage-v8": "1.4.0",
+    "@vitest/coverage-v8": "1.5.0",
     "coveralls": "3.1.1",
     "happy-dom": "14.7.1",
     "sass": "1.74.1",
     "vite": "5.2.8",
-    "vitest": "1.4.0"
+    "vitest": "1.5.0"
   },
   "scripts": {
     "dev": "VITE_APP_RELEASE_VERSION=$npm_package_version vite",

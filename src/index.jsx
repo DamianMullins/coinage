@@ -10,7 +10,7 @@ import setupLogRocketReact from 'logrocket-react';
 import store, { history } from './store/configureStore';
 import AppContainer from './containers/AppContainer';
 
-if (process.env.NODE_ENV === 'production') {
+if (import.meta.env.NODE_ENV === 'production') {
   LogRocket.init('u8t5r0/coinsly');
   setupLogRocketReact(LogRocket);
   Raven.setDataCallback(data => {

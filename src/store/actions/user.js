@@ -18,7 +18,7 @@ export const onAuthChanged = () => dispatch => {
     if (user) {
       dispatch(setInitialState(user));
 
-      if (import.meta.env.NODE_ENV === 'production') {
+      if (import.meta.env.VITE_NODE_ENV === 'production') {
         LogRocket.identify(user.uid, {
           name: user.displayName,
           email: user.email

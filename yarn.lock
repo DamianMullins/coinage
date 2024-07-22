@@ -1609,7 +1609,7 @@ __metadata:
     happy-dom: "npm:14.12.3"
     history: "npm:4.10.1"
     immer: "npm:10.1.1"
-    logrocket: "npm:8.1.0"
+    logrocket: "npm:8.1.1"
     logrocket-react: "npm:6.0.3"
     qs: "npm:6.12.3"
     react: "npm:18.3.1"
@@ -2713,10 +2713,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"logrocket@npm:8.1.0":
-  version: 8.1.0
-  resolution: "logrocket@npm:8.1.0"
-  checksum: 10c0/fef2973d8e304036ebc5e304a93bb157c3b32aac43966e0373e3d6007a6d287db05ea66f15e6691ce390d74298ead101684d5ea7400a1b0f4e5a813db4d947b9
+"logrocket@npm:8.1.1":
+  version: 8.1.1
+  resolution: "logrocket@npm:8.1.1"
+  checksum: 10c0/5a91d5c91236c0ebfcdb8157ef90e542024a868cb0c71c0c9b9dd8367ae62520ccfb97c38d0257abd7362476c45f78b691ecf9303ed99284a6a3aa2731a8040b
   languageName: node
   linkType: hard
 
